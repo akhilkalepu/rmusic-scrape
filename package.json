@@ -1,0 +1,23 @@
+{
+  "name": "rmusic-scrape",
+  "version": "1.0.0",
+  "description": "A python script that scrapes /r/music's top 100 posts and writes them to a csv file.",
+  "main": "keys.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theinfamousAK/rmusic-scrape.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/theinfamousAK/rmusic-scrape/issues"
+  },
+  "homepage": "https://github.com/theinfamousAK/rmusic-scrape#readme",
+  "dependencies": {
+    "dotenv": "^6.1.0",
+    "node-spotify-api": "^1.0.7"
+  }
+}

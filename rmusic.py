@@ -11,7 +11,7 @@ for submission in reddit.subreddit('music').top('day'):
     if submission.link_flair_text == 'music streaming':
         top100.append(submission.title)
     
-print '\n'.join(top100)
+# print '\n'.join(top100)
 
 with open("data.csv", "w") as f:
     wr = csv.writer(f, delimiter="\n")
