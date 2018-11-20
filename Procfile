@@ -1,1 +1,1 @@
-app: python rmusic.py
+web: python rmusic.py
