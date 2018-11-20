@@ -23,11 +23,15 @@ function csv() {
         var spotify = new Spotify(keys.spotify);
 
         for (i = 0; i < musicArray.length; i++) {
+
             var query = "'" + musicArray[i].column1 + "'";
+            console.log(query);
+            // var editedQuery = query.replace(/\s*\(.*?\)\s*/g, '');
+            // console.log(editedQuery);
             
             spotify.search({
                 type: "track",
-                query: query,
+                query: editedQuery,
                 limit: 1
             }, function (err, data) {
                 if (err) {
@@ -35,8 +39,9 @@ function csv() {
                     return;
                 } else {
                     console.log("-------------------------");
-                    console.log("Artist: " + data.tracks.items[0].album.artists[0].name);
                     console.log("Song: " + data.tracks.items[0].name);
+                    console.log("Artist: " + data.tracks.items[0].album.artists[0].name);
+                    console.log("Album: " + data.tracks.items[0].album.name);
                     console.log("Preview link: " + data.tracks.items[0].external_urls.spotify);
                     console.log("-------------------------");
                 }
